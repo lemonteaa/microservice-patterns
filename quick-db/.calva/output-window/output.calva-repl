@@ -1,0 +1,345 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉quick-db.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉quick-db.core꞉> 
+nil
+clj꞉quick-db.db꞉> 
+#'quick-db.db/pg-db
+clj꞉quick-db.db꞉> 
+({:id 1001, :first_name "Sally", :last_name "Thomas", :email "sally.thomas@acme.com"}
+ {:id 1002, :first_name "George", :last_name "Bailey", :email "gbailey@foobar.com"}
+ {:id 1003, :first_name "Edward", :last_name "Walker", :email "ed@walker.com"}
+ {:id 1004, :first_name "Anne", :last_name "Kretchmar", :email "annek@noanswer.org"}
+ {:id 1005, :first_name "Hello", :last_name "World", :email "testing@hi.com"})
+clj꞉quick-db.db꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉quick-db.core꞉> 
+; Jack-in done.
+clj꞉quick-db.core꞉> 
+nil
+clj꞉quick-db.db꞉> 
+nil
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/create-topics!
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/pending-messages
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/search-topic-by-key
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/build-consumer
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/consumer-subscribe
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/build-producer
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/run-application
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/run-application
+clj꞉quick-db.kafka꞉> 
+(run-application "localhost:9092" "dbserver1.inventory.customers" "test.dummy1")
+Creating the topics ["test.dummy1" "dbserver1.inventory.customers"]Starting the kafka example app. With topic consuming topic dbserver1.inventory.customers and producing to test.dummy1end offsets {dbserver1.inventory.customers-0=5}Pending messages? truePending messages? trueSending on value ( Processed Value: {"schema":{"type":"struct","fields":[{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"},{"type":"string","optional":false,"field":"first_name"},{"type":"string","optional":false,"field":"last_name"},{"type":"string","optional":false,"field":"email"}],"optional":true,"name":"dbserver1.inventory.customers.Value","field":"before"},{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"},{"type":"string","optional":false,"field":"first_name"},{"type":"string","optional":false,"field":"last_name"},{"type":"string","optional":false,"field":"email"}],"optional":true,"name":"dbserver1.inventory.customers.Value","field":"after"},{"type":"struct","fie
+lds":[{"type":"string","optional":false,"field":"version"},{"type":"string","optional":false,"field":"connector"},{"type":"string","optional":false,"field":"name"},{"type":"int64","optional":false,"field":"ts_ms"},{"type":"string","optional":true,"name":"io.debezium.data.Enum","version":1,"parameters":{"allowed":"true,last,false,incremental"},"default":"false","field":"snapshot"},{"type":"string","optional":false,"field":"db"},{"type":"string","optional":true,"field":"sequence"},{"type":"string","optional":false,"field":"schema"},{"type":"string","optional":false,"field":"table"},{"type":"int64","optional":true,"field":"txId"},{"type":"int64","optional":true,"field":"lsn"},{"type":"int64","optional":true,"field":"xmin"}],"optional":false,"name":"io.debezium.connector.postgresql.Source","field":"source"},{"type":"string","optional":false,"field":"op"},{"type":"int64","optional":true,"field":"ts_ms"},{"type":"struct","fields":[{"type":"string","optional":false,"field":"id"},{"type":"int64","optional":false,"fie
+ld":"total_order"},{"type":"int64","optional":false,"field":"data_collection_order"}],"optional":true,"field":"transaction"}],"optional":false,"name":"dbserver1.inventory.customers.Envelope"},"payload":{"before":null,"after":{"id":1001,"first_name":"Sally","last_name":"Thomas","email":"sally.thomas@acme.com"},"source":{"version":"1.9.5.Final","connector":"postgresql","name":"dbserver1","ts_ms":1661505853999,"snapshot":"true","db":"postgres","sequence":"[null,\"36552480\"]","schema":"inventory","table":"customers","txId":764,"lsn":36552480,"xmin":null},"op":"r","ts_ms":1661505854002,"transaction":null}} )Sending on value ( Processed Value: {"schema":{"type":"struct","fields":[{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"},{"type":"string","optional":false,"field":"first_name"},{"type":"string","optional":false,"field":"last_name"},{"type":"string","optional":false,"field":"email"}],"optional":true,"name":"dbserver1.inventory.customers.Value","field":"before"},{"type":"str
+uct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"},{"type":"string","optional":false,"field":"first_name"},{"type":"string","optional":false,"field":"last_name"},{"type":"string","optional":false,"field":"email"}],"optional":true,"name":"dbserver1.inventory.customers.Value","field":"after"},{"type":"struct","fields":[{"type":"string","optional":false,"field":"version"},{"type":"string","optional":false,"field":"connector"},{"type":"string","optional":false,"field":"name"},{"type":"int64","optional":false,"field":"ts_ms"},{"type":"string","optional":true,"name":"io.debezium.data.Enum","version":1,"parameters":{"allowed":"true,last,false,incremental"},"default":"false","field":"snapshot"},{"type":"string","optional":false,"field":"db"},{"type":"string","optional":true,"field":"sequence"},{"type":"string","optional":false,"field":"schema"},{"type":"string","optional":false,"field":"table"},{"type":"int64","optional":true,"field":"txId"},{"type":"int64","optional":true,"field":"lsn"},{"type
+":"int64","optional":true,"field":"xmin"}],"optional":false,"name":"io.debezium.connector.postgresql.Source","field":"source"},{"type":"string","optional":false,"field":"op"},{"type":"int64","optional":true,"field":"ts_ms"},{"type":"struct","fields":[{"type":"string","optional":false,"field":"id"},{"type":"int64","optional":false,"field":"total_order"},{"type":"int64","optional":false,"field":"data_collection_order"}],"optional":true,"field":"transaction"}],"optional":false,"name":"dbserver1.inventory.customers.Envelope"},"payload":{"before":null,"after":{"id":1002,"first_name":"George","last_name":"Bailey","email":"gbailey@foobar.com"},"source":{"version":"1.9.5.Final","connector":"postgresql","name":"dbserver1","ts_ms":1661505854007,"snapshot":"true","db":"postgres","sequence":"[null,\"36552480\"]","schema":"inventory","table":"customers","txId":764,"lsn":36552480,"xmin":null},"op":"r","ts_ms":1661505854007,"transaction":null}} )Sending on value ( Processed Value: {"schema":{"type":"struct","fields":[{"type
+":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"},{"type":"string","optional":false,"field":"first_name"},{"type":"string","optional":false,"field":"last_name"},{"type":"string","optional":false,"field":"email"}],"optional":true,"name":"dbserver1.inventory.customers.Value","field":"before"},{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"},{"type":"string","optional":false,"field":"first_name"},{"type":"string","optional":false,"field":"last_name"},{"type":"string","optional":false,"field":"email"}],"optional":true,"name":"dbserver1.inventory.customers.Value","field":"after"},{"type":"struct","fields":[{"type":"string","optional":false,"field":"version"},{"type":"string","optional":false,"field":"connector"},{"type":"string","optional":false,"field":"name"},{"type":"int64","optional":false,"field":"ts_ms"},{"type":"string","optional":true,"name":"io.debezium.data.Enum","version":1,"parameters":{"allowed":"true,last,false,incremental"},"default"
+:"false","field":"snapshot"},{"type":"string","optional":false,"field":"db"},{"type":"string","optional":true,"field":"sequence"},{"type":"string","optional":false,"field":"schema"},{"type":"string","optional":false,"field":"table"},{"type":"int64","optional":true,"field":"txId"},{"type":"int64","optional":true,"field":"lsn"},{"type":"int64","optional":true,"field":"xmin"}],"optional":false,"name":"io.debezium.connector.postgresql.Source","field":"source"},{"type":"string","optional":false,"field":"op"},{"type":"int64","optional":true,"field":"ts_ms"},{"type":"struct","fields":[{"type":"string","optional":false,"field":"id"},{"type":"int64","optional":false,"field":"total_order"},{"type":"int64","optional":false,"field":"data_collection_order"}],"optional":true,"field":"transaction"}],"optional":false,"name":"dbserver1.inventory.customers.Envelope"},"payload":{"before":null,"after":{"id":1003,"first_name":"Edward","last_name":"Walker","email":"ed@walker.com"},"source":{"version":"1.9.5.Final","connector":"pos
+tgresql","name":"dbserver1","ts_ms":1661505854008,"snapshot":"true","db":"postgres","sequence":"[null,\"36552480\"]","schema":"inventory","table":"customers","txId":764,"lsn":36552480,"xmin":null},"op":"r","ts_ms":1661505854008,"transaction":null}} )Sending on value ( Processed Value: {"schema":{"type":"struct","fields":[{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"},{"type":"string","optional":false,"field":"first_name"},{"type":"string","optional":false,"field":"last_name"},{"type":"string","optional":false,"field":"email"}],"optional":true,"name":"dbserver1.inventory.customers.Value","field":"before"},{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"},{"type":"string","optional":false,"field":"first_name"},{"type":"string","optional":false,"field":"last_name"},{"type":"string","optional":false,"field":"email"}],"optional":true,"name":"dbserver1.inventory.customers.Value","field":"after"},{"type":"struct","fields":[{"type":"string","o
+ptional":false,"field":"version"},{"type":"string","optional":false,"field":"connector"},{"type":"string","optional":false,"field":"name"},{"type":"int64","optional":false,"field":"ts_ms"},{"type":"string","optional":true,"name":"io.debezium.data.Enum","version":1,"parameters":{"allowed":"true,last,false,incremental"},"default":"false","field":"snapshot"},{"type":"string","optional":false,"field":"db"},{"type":"string","optional":true,"field":"sequence"},{"type":"string","optional":false,"field":"schema"},{"type":"string","optional":false,"field":"table"},{"type":"int64","optional":true,"field":"txId"},{"type":"int64","optional":true,"field":"lsn"},{"type":"int64","optional":true,"field":"xmin"}],"optional":false,"name":"io.debezium.connector.postgresql.Source","field":"source"},{"type":"string","optional":false,"field":"op"},{"type":"int64","optional":true,"field":"ts_ms"},{"type":"struct","fields":[{"type":"string","optional":false,"field":"id"},{"type":"int64","optional":false,"field":"total_order"},{"type
+":"int64","optional":false,"field":"data_collection_order"}],"optional":true,"field":"transaction"}],"optional":false,"name":"dbserver1.inventory.customers.Envelope"},"payload":{"before":null,"after":{"id":1004,"first_name":"Anne","last_name":"Kretchmar","email":"annek@noanswer.org"},"source":{"version":"1.9.5.Final","connector":"postgresql","name":"dbserver1","ts_ms":1661505854008,"snapshot":"true","db":"postgres","sequence":"[null,\"36552480\"]","schema":"inventory","table":"customers","txId":764,"lsn":36552480,"xmin":null},"op":"r","ts_ms":1661505854008,"transaction":null}} )Sending on value ( Processed Value: {"schema":{"type":"struct","fields":[{"type":"struct","fields":[{"type":"int32","optional":false,"default":0,"field":"id"},{"type":"string","optional":false,"field":"first_name"},{"type":"string","optional":false,"field":"last_name"},{"type":"string","optional":false,"field":"email"}],"optional":true,"name":"dbserver1.inventory.customers.Value","field":"before"},{"type":"struct","fields":[{"type":"in
+t32","optional":false,"default":0,"field":"id"},{"type":"string","optional":false,"field":"first_name"},{"type":"string","optional":false,"field":"last_name"},{"type":"string","optional":false,"field":"email"}],"optional":true,"name":"dbserver1.inventory.customers.Value","field":"after"},{"type":"struct","fields":[{"type":"string","optional":false,"field":"version"},{"type":"string","optional":false,"field":"connector"},{"type":"string","optional":false,"field":"name"},{"type":"int64","optional":false,"field":"ts_ms"},{"type":"string","optional":true,"name":"io.debezium.data.Enum","version":1,"parameters":{"allowed":"true,last,false,incremental"},"default":"false","field":"snapshot"},{"type":"string","optional":false,"field":"db"},{"type":"string","optional":true,"field":"sequence"},{"type":"string","optional":false,"field":"schema"},{"type":"string","optional":false,"field":"table"},{"type":"int64","optional":true,"field":"txId"},{"type":"int64","optional":true,"field":"lsn"},{"type":"int64","optional":true,
+clj꞉quick-db.kafka꞉> 
+; Evaluation was interrupted
+clj꞉quick-db.kafka꞉> 
+; Execution error (InterruptedException) at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient/maybeThrowInterruptException (ConsumerNetworkClient.java:520).
+; null
+"field":"xmin"}],"optional":false,"name":"io.debezium.connector.postgresql.Source","field":"source"},{"type":"string","optional":false,"field":"op"},{"type":"int64","optional":true,"field":"ts_ms"},{"type":"struct","fields":[{"type":"string","optional":false,"field":"id"},{"type":"int64","optional":false,"field":"total_order"},{"type":"int64","optional":false,"field":"data_collection_order"}],"optional":true,"field":"transaction"}],"optional":false,"name":"dbserver1.inventory.customers.Envelope"},"payload":{"before":null,"after":{"id":1005,"first_name":"Hello","last_name":"World","email":"testing@hi.com"},"source":{"version":"1.9.5.Final","connector":"postgresql","name":"dbserver1","ts_ms":1661508738529,"snapshot":"false","db":"postgres","sequence":"[null,\"36576776\"]","schema":"inventory","table":"customers","txId":765,"lsn":36576776,"xmin":null},"op":"c","ts_ms":1661508738785,"transaction":null}} )
+clj꞉quick-db.kafka꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉quick-db.core꞉> 
+; Jack-in done.
+clj꞉quick-db.core꞉> 
+nil
+clj꞉quick-db.db꞉> 
+#'quick-db.db/worker
+clj꞉quick-db.db꞉> 
+#'quick-db.db/pg-db
+clj꞉quick-db.db꞉> 
+({:id 1001, :first_name "Sally", :last_name "Thomas", :email "sally.thomas@acme.com"}
+ {:id 1002, :first_name "George", :last_name "Bailey", :email "gbailey@foobar.com"}
+ {:id 1003, :first_name "Edward", :last_name "Walker", :email "ed@walker.com"}
+ {:id 1004, :first_name "Anne", :last_name "Kretchmar", :email "annek@noanswer.org"}
+ {:id 1005, :first_name "Hello", :last_name "World", :email "testing@hi.com"})
+clj꞉quick-db.db꞉> 
+; Execution error (PSQLException) at org.postgresql.core.v3.QueryExecutorImpl/receiveErrorResponse (QueryExecutorImpl.java:2676).
+; ERROR: duplicate key value violates unique constraint "customers_email_key"
+  Detail: Key (email)=(testing@hi.com) already exists.
+clj꞉quick-db.db꞉> 
+({:id 1006, :first_name "Hello", :last_name "World", :email "missing_wong@hi.com"})
+clj꞉quick-db.db꞉> 
+Creating the topics ["test.dummy1" "dbserver1.inventory.customers"]Starting the kafka example app. With topic consuming topic dbserver1.inventory.customers and producing to test.dummy1{:schema {:type struct, :fields [{:type struct, :fields [{:type int32, :optional false, :default 0, :field id} {:type string, :optional false, :field first_name} {:type string, :optional false, :field last_name} {:type string, :optional false, :field email}], :optional true, :name dbserver1.inventory.customers.Value, :field before} {:type struct, :fields [{:type int32, :optional false, :default 0, :field id} {:type string, :optional false, :field first_name} {:type string, :optional false, :field last_name} {:type string, :optional false, :field email}], :optional true, :name dbserver1.inventory.customers.Value, :field after} {:type struct, :fields [{:type string, :optional false, :field version} {:type string, :optional false, :field connector} {:type string, :optional false, :field name} {:type int64, :optional false, :field t
+s_ms} {:type string, :optional true, :name io.debezium.data.Enum, :version 1, :parameters {:allowed true,last,false,incremental}, :default false, :field snapshot} {:type string, :optional false, :field db} {:type string, :optional true, :field sequence} {:type string, :optional false, :field schema} {:type string, :optional false, :field table} {:type int64, :optional true, :field txId} {:type int64, :optional true, :field lsn} {:type int64, :optional true, :field xmin}], :optional false, :name io.debezium.connector.postgresql.Source, :field source} {:type string, :optional false, :field op} {:type int64, :optional true, :field ts_ms} {:type struct, :fields [{:type string, :optional false, :field id} {:type int64, :optional false, :field total_order} {:type int64, :optional false, :field data_collection_order}], :optional true, :field transaction}], :optional false, :name dbserver1.inventory.customers.Envelope}, :payload {:before nil, :after {:id 1006, :first_name Hello, :last_name World, :email missing_wong@
+hi.com}, :source {:connector postgresql, :schema inventory, :xmin nil, :table customers, :db postgres, :name dbserver1, :txId 767, :snapshot false, :sequence ["36577752","36578856"], :ts_ms 1661531289516, :lsn 36578856, :version 1.9.5.Final}, :op c, :ts_ms 1661531289724, :transaction nil}}
+#'quick-db.kafka/run-application
+clj꞉quick-db.kafka꞉> 
+nil
+clj꞉quick-db.db꞉> 
+#'quick-db.db/pg-db
+clj꞉quick-db.db꞉> 
+#'quick-db.db/worker
+clj꞉quick-db.db꞉> 
+({:id 1007, :first_name "Foo", :last_name "Bar", :email "ggg@bye.com"})
+clj꞉quick-db.db꞉> 
+{:schema {:type struct, :fields [{:type struct, :fields [{:type int32, :optional false, :default 0, :field id} {:type string, :optional false, :field first_name} {:type string, :optional false, :field last_name} {:type string, :optional false, :field email}], :optional true, :name dbserver1.inventory.customers.Value, :field before} {:type struct, :fields [{:type int32, :optional false, :default 0, :field id} {:type string, :optional false, :field first_name} {:type string, :optional false, :field last_name} {:type string, :optional false, :field email}], :optional true, :name dbserver1.inventory.customers.Value, :field after} {:type struct, :fields [{:type string, :optional false, :field version} {:type string, :optional false, :field connector} {:type string, :optional false, :field name} {:type int64, :optional false, :field ts_ms} {:type string, :optional true, :name io.debezium.data.Enum, :version 1, :parameters {:allowed true,last,false,incremental}, :default false, :field snapshot} {:type string, :optio
+nal false, :field db} {:type string, :optional true, :field sequence} {:type string, :optional false, :field schema} {:type string, :optional false, :field table} {:type int64, :optional true, :field txId} {:type int64, :optional true, :field lsn} {:type int64, :optional true, :field xmin}], :optional false, :name io.debezium.connector.postgresql.Source, :field source} {:type string, :optional false, :field op} {:type int64, :optional true, :field ts_ms} {:type struct, :fields [{:type string, :optional false, :field id} {:type int64, :optional false, :field total_order} {:type int64, :optional false, :field data_collection_order}], :optional true, :field transaction}], :optional false, :name dbserver1.inventory.customers.Envelope}, :payload {:before nil, :after {:id 1007, :first_name Foo, :last_name Bar, :email ggg@bye.com}, :source {:connector postgresql, :schema inventory, :xmin nil, :table customers, :db postgres, :name dbserver1, :txId 768, :snapshot false, :sequence ["36579360","36579648"], :ts_ms 166153
+1948300, :lsn 36579648, :version 1.9.5.Final}, :op c, :ts_ms 1661531948422, :transaction nil}}
+; Syntax error reading source at (REPL:131:969).
+; Map literal must contain an even number of forms
+clj꞉quick-db.db꞉> 
+({:id 1001, :first_name "Sally", :last_name "Thomas", :email "sally.thomas@acme.com"}
+ {:id 1002, :first_name "George", :last_name "Bailey", :email "gbailey@foobar.com"}
+ {:id 1003, :first_name "Edward", :last_name "Walker", :email "ed@walker.com"}
+ {:id 1004, :first_name "Anne", :last_name "Kretchmar", :email "annek@noanswer.org"}
+ {:id 1005, :first_name "Hello", :last_name "World", :email "testing@hi.com"}
+ {:id 1006, :first_name "Hello", :last_name "World", :email "missing_wong@hi.com"}
+ {:id 1007, :first_name "Foo", :last_name "Bar", :email "ggg@bye.com"})
+clj꞉quick-db.db꞉> 
+true
+clj꞉quick-db.db꞉> 
+nil
+clj꞉quick-db.db꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉quick-db.core꞉> 
+; Jack-in done.
+clj꞉quick-db.core꞉> 
+nil
+clj꞉quick-db.db꞉> 
+#'quick-db.db/pg-db
+clj꞉quick-db.db꞉> 
+({:id 1001, :first_name "Sally", :last_name "Thomas", :email "sally.thomas@acme.com"}
+ {:id 1002, :first_name "George", :last_name "Bailey", :email "gbailey@foobar.com"}
+ {:id 1003, :first_name "Edward", :last_name "Walker", :email "ed@walker.com"}
+ {:id 1004, :first_name "Anne", :last_name "Kretchmar", :email "annek@noanswer.org"}
+ {:id 1005, :first_name "Hello", :last_name "World", :email "testing@hi.com"}
+ {:id 1006, :first_name "Hello", :last_name "World", :email "missing_wong@hi.com"}
+ {:id 1007, :first_name "Foo", :last_name "Bar", :email "ggg@bye.com"})
+clj꞉quick-db.db꞉> 
+#'quick-db.db/worker
+clj꞉quick-db.db꞉> 
+true
+clj꞉quick-db.db꞉> 
+nil
+clj꞉quick-db.db꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉quick-db.core꞉> 
+; Jack-in done.
+clj꞉quick-db.core꞉> 
+nil
+clj꞉quick-db.kafka꞉> 
+; Syntax error compiling at (src/quick_db/kafka.clj:83:18).
+; Unable to resolve symbol: build-consumer in this context
+clj꞉quick-db.kafka꞉> 
+nil
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/create-topics!
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/pending-messages
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/search-topic-by-key
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/build-consumer
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/consumer-subscribe
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/build-producer
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/run-application
+clj꞉quick-db.kafka꞉> 
+nil
+clj꞉quick-db.db꞉> 
+#'quick-db.db/worker
+clj꞉quick-db.db꞉> 
+; Syntax error compiling at (src/quick_db/db.clj:24:1).
+; Unable to resolve symbol: pg-db in this context
+clj꞉quick-db.db꞉> 
+#'quick-db.db/pg-db
+clj꞉quick-db.db꞉> 
+({:id 1008, :first_name "Foo", :last_name "Bar", :email "jkdsn@apple.com"})
+clj꞉quick-db.db꞉> 
+#'quick-db.kafka/build-consumer
+clj꞉quick-db.kafka꞉> 
+#'quick-db.kafka/run-application
+clj꞉quick-db.kafka꞉> 
+false
+clj꞉quick-db.db꞉> 
+false
+clj꞉quick-db.db꞉> 
+#'quick-db.db/worker
+clj꞉quick-db.db꞉> 
+({:id 1009, :first_name "Foo", :last_name "Bar", :email "3gyfivbm@apple.com"})
+clj꞉quick-db.db꞉> 
+#'quick-db.kafka/run-application
+clj꞉quick-db.kafka꞉> 
+false
+clj꞉quick-db.db꞉> 
+#'quick-db.db/worker
+clj꞉quick-db.db꞉> 
+({:id 1010, :first_name "Foo", :last_name "Bar", :email "jdfnviuh3giruh@apple.com"})
+clj꞉quick-db.db꞉> 
+#'quick-db.kafka/run-application
+clj꞉quick-db.kafka꞉> 
+false
+clj꞉quick-db.db꞉> 
+false
+clj꞉quick-db.db꞉> 
+nil
+clj꞉quick-db.db꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉quick-db.core꞉> 
+; Jack-in done.
+clj꞉quick-db.core꞉> 
+nil
+clj꞉quick-db.db꞉> 
+#'quick-db.db/pg-db
+clj꞉quick-db.db꞉> 
+; Syntax error compiling at (src/quick_db/db.clj:30:21).
+; No such var: kafka/run-application
+clj꞉quick-db.db꞉> 
+nil
+clj꞉quick-db.kafka꞉> 
+; Evaluating file: kafka.clj
+#'quick-db.kafka/run-application
+clj꞉quick-db.kafka꞉> 
+#'quick-db.db/worker
+clj꞉quick-db.db꞉> 
+#'quick-db.kafka/run-application
+clj꞉quick-db.kafka꞉> 
+false
+clj꞉quick-db.db꞉> 
+false
+clj꞉quick-db.db꞉> 
+#'quick-db.db/worker
+clj꞉quick-db.db꞉> 
+nil
+clj꞉quick-db.db꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉quick-db.core꞉> 
+; Jack-in done.
+clj꞉quick-db.core꞉> 
+; Evaluating file: kafka.clj
+#'quick-db.kafka/run-application
+clj꞉quick-db.kafka꞉> 
+nil
+clj꞉quick-db.db꞉> 
+{:classname "org.postgresql.Driver",
+ :subprotocol "postgresql",
+ :subname "//localhost:5432/my_db",
+ :user "postgres",
+ :password "postgres"}
+clj꞉quick-db.db꞉> 
+#'quick-db.db/pg-db
+clj꞉quick-db.db꞉> 
+({:id 1001, :first_name "Sally", :last_name "Thomas", :email "sally.thomas@acme.com"}
+ {:id 1002, :first_name "George", :last_name "Bailey", :email "gbailey@foobar.com"}
+ {:id 1003, :first_name "Edward", :last_name "Walker", :email "ed@walker.com"}
+ {:id 1004, :first_name "Anne", :last_name "Kretchmar", :email "annek@noanswer.org"}
+ {:id 1005, :first_name "Hello", :last_name "World", :email "testing@hi.com"}
+ {:id 1006, :first_name "Hello", :last_name "World", :email "missing_wong@hi.com"}
+ {:id 1007, :first_name "Foo", :last_name "Bar", :email "ggg@bye.com"}
+ {:id 1008, :first_name "Foo", :last_name "Bar", :email "jkdsn@apple.com"}
+ {:id 1009, :first_name "Foo", :last_name "Bar", :email "3gyfivbm@apple.com"}
+ {:id 1010, :first_name "Foo", :last_name "Bar", :email "jdfnviuh3giruh@apple.com"})
+clj꞉quick-db.db꞉> 
+#'quick-db.db/worker
+clj꞉quick-db.db꞉> 
+({:id 1011, :first_name "Rose", :last_name "Mary", :email "admin@co-iter.com"})
+clj꞉quick-db.db꞉> 
+true
+clj꞉quick-db.db꞉> 
+true
+clj꞉quick-db.db꞉> 
+nil
+clj꞉quick-db.db꞉> 
+; nREPL Connection was closed
