@@ -69,7 +69,9 @@
 
 (defmodel Order :order
   IModel
-  (primary-key [_] :order_id))
+  (primary-key [_] :order_id)
+  (hydration-keys [_]
+                  [:order]))
 
 (defn create-empty-order [cust {:keys [contact phone email addr]}] 
   (let [shipping (tdb/insert! Shipping
@@ -111,6 +113,26 @@
 (hydrate {:store_item_id 2} :store_item)
 
 (toucan.hydrate/flush-hydration-key-caches!)
+
+(defmodel TransactionReq :transaction_req
+  IModel
+  (primary-key [_] :transaction_req_id)
+  (hydration-keys [_] [:task_data]))
+
+(defmodel Outbox :outbox
+  IModel
+  (primary-key [_] :message_id))
+
+(defn create-order-trans! [order_id]
+  (tdb/transaction
+   (tdb/insert! TransactionReq
+                :order_id order_id
+                :transaction_req_status 0)
+   (tdb/insert! Outbox
+                :task_data order_id
+                :task_type 10
+                :task_status 0)))
+
 
 (def worker (future (kafka/run-application "localhost:9092" 
                                            "dbserver1.inventory.customers" 
